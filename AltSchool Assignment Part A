@@ -1,0 +1,259 @@
+Index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Assignment - Home</title>
+</head>
+<body>
+
+    <!-- Global Navigation Header -->
+    <header>
+        <nav aria-label="Global Navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="form.html">Application Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h1>Welcome to Assignment One</h1>
+                <p>An introduction to web structure using pure semantic HTML.</p>
+            </header>
+
+            <section>
+                <h2>About This Project</h2>
+                <p>
+                    This project demonstrates accessible, valid, and clean semantic markup without 
+                    external or inline CSS styling. It connects the primary assignment overview 
+                    directly to an AltSchool Africa student registration form.
+                </p>
+            </section>
+
+            <section>
+                <h2>Quick Links</h2>
+                <p>
+                    Ready to register? Visit the <a href="form.html">AltSchool Application Form</a>.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <hr>
+        <address>
+            <p><strong>Contact Details:</strong></p>
+            <p>Location: Keffi, Nasarawa State, Nigeria</p>
+            <p>Email: <a href="japariabdu@gmail.com">japariabdu@gmail.com</a></p>
+        </address>
+        <p><small>&copy; 2026 All Rights Reserved.</small></p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+Form.Html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AltSchool Africa - Application Form</title>
+</head>
+<body>
+
+    <!-- Global Navigation Header -->
+    <header>
+        <nav aria-label="Global Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="form.html" aria-current="page">Application Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <header>
+            <h1>AltSchool Africa Application Form</h1>
+            <p>Fill out the application form below to set up your student account.</p>
+        </header>
+
+        <form action="#" method="post">
+
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <p>
+                    <label for="first-name">First Name *</label><br>
+                    <input type="text" id="first-name" name="first_name" required autocomplete="given-name">
+                </p>
+
+                <p>
+                    <label for="last-name">Last Name *</label><br>
+                    <input type="text" id="last-name" name="last_name" required autocomplete="family-name">
+                </p>
+
+                <p>
+                    <label for="gender">Gender *</label><br>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth *</label><br>
+                    <input type="date" id="dob" name="date_of_birth" required>
+                </p>
+            </fieldset>
+
+            <!-- Contact & Location Information -->
+            <fieldset>
+                <legend>Contact &amp; Location Details</legend>
+
+                <p>
+                    <label for="email">Email Address *</label><br>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com">
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number *</label><br>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+234...">
+                </p>
+
+                <p>
+                    <label for="country">Country of Residence *</label><br>
+                    <select id="country" name="country" required autocomplete="country-name">
+                        <option value="" disabled selected>Select country</option>
+                        <option value="nigeria">Nigeria</option>
+                        <option value="ghana">Ghana</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="rwanda">Rwanda</option>
+                        <option value="south-africa">South Africa</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="state">State / City of Residence *</label><br>
+                    <input type="text" id="state" name="state" required>
+                </p>
+            </fieldset>
+
+            <!-- Educational & Program Details -->
+            <fieldset>
+                <legend>Program &amp; Education</legend>
+
+                <p>
+                    <label for="school-track">Select School / Track *</label><br>
+                    <select id="school-track" name="school_track" required>
+                        <option value="" disabled selected>Select track</option>
+                        <optgroup label="School of Engineering">
+                            <option value="frontend">Frontend Engineering</option>
+                            <option value="backend">Backend Engineering</option>
+                            <option value="cloud">Cloud Engineering</option>
+                        </optgroup>
+                        <optgroup label="School of Product">
+                            <option value="product-design">Product Design</option>
+                            <option value="product-management">Product Management</option>
+                            <option value="product-marketing">Product Marketing</option>
+                        </optgroup>
+                        <optgroup label="School of Data">
+                            <option value="data-engineering">Data Engineering</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="data-analytics">Data Analytics</option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="education-level">Highest Level of Education *</label><br>
+                    <select id="education-level" name="education_level" required>
+                        <option value="" disabled selected>Select level</option>
+                        <option value="high-school">High School / Secondary School</option>
+                        <option value="diploma">Diploma / Associate Degree</option>
+                        <option value="bachelors">Bachelor's Degree</option>
+                        <option value="masters">Master's Degree</option>
+                        <option value="doctorate">Doctorate / PhD</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="hear-about">How did you hear about AltSchool Africa?</label><br>
+                    <select id="hear-about" name="referral_source">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="twitter">Twitter / X</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="facebook">Facebook / Instagram</option>
+                        <option value="friend">Friend or Colleague</option>
+                        <option value="youtube">YouTube</option>
+                        <option value="search">Search Engine</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <!-- Account Security -->
+            <fieldset>
+                <legend>Security</legend>
+
+                <p>
+                    <label for="password">Password *</label><br>
+                    <input type="password" id="password" name="password" minlength="8" required autocomplete="new-password">
+                </p>
+
+                <p>
+                    <label for="confirm-password">Confirm Password *</label><br>
+                    <input type="password" id="confirm-password" name="confirm_password" minlength="8" required autocomplete="new-password">
+                </p>
+            </fieldset>
+
+            <!-- Terms & Submission -->
+            <fieldset>
+                <legend>Agreements</legend>
+
+                <p>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the Terms of Service and Privacy Policy *</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Receive updates, announcements, and newsletters</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <button type="submit">Submit Application</button>
+                <button type="reset">Clear Form</button>
+            </p>
+
+        </form>
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <hr>
+        <address>
+            <p><strong>Contact Details:</strong></p>
+            <p>Location: Keffi, Nasarawa State, Nigeria</p>
+            <p>Email: <a href="japariabdu@gmail.com">japariabdu@gmail.com</a></p>
+        </address>
+        <p><small>&copy; 2026 All Rights Reserved.</small></p>
+    </footer>
+
+</body>
+</html>
